@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Appointment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🏥 HealthCare Hospital</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#doctors">Doctors</a>
+            <a href="#services">Services</a>
+            <a href="#appointment">Appointment</a>
+        </nav>
+    </header>
+    <section id="home" class="hero">
+        <h2>Your Health, Our Priority</h2>
+        <p>Book your doctor appointment easily and quickly.</p>
+        <a href="#appointment" class="btn">Book Appointment</a>
+    </section>
+    <section id="doctors">
+        <h2>Our Doctors</h2>
+        <div class="doctor-container">
+            <div class="card">
+                <h3>Dr. Arun Kumar</h3>
+                <p>Cardiologist</p>
+                <p>Experience: 10 Years</p>
+            </div>
+            <div class="card">
+                <h3>Dr. Priya</h3>
+                <p>Dermatologist</p>
+                <p>Experience: 8 Years</p>
+            </div>
+            <div class="card">
+                <h3>Dr. Ravi</h3>
+                <p>Pediatrician</p>
+                <p>Experience: 7 Years</p>
+            </div>
+        </div>
+    </section>
+    <section id="services">
+        <h2>Our Services</h2>
+
+        <div class="service-container">
+            <div class="card">🫀 Cardiology</div>
+            <div class="card">🩺 General Checkup</div>
+            <div class="card">👶 Child Care</div>
+            <div class="card">🧴 Dermatology</div>
+        </div>
+    </section>
+    <section id="appointment">
+        <h2>Book an Appointment</h2>
+        <form id="appointmentForm">
+            <input type="text" id="name" placeholder="Patient Name" required>
+            <input type="number" id="age" placeholder="Patient Age" min="1" max="120" required>
+            <input type="tel" id="phone" placeholder="Phone Number" pattern="[0-9]{10}" maxlength="10" required>
+            <select id="doctor" required>
+                <option value="">Select Doctor</option>
+                <option value="Dr. Arun Kumar">Dr. Arun Kumar - Cardiologist</option>
+                <option value="Dr. Priya">Dr. Priya - Dermatologist</option>
+                <option value="Dr. Ravi">Dr. Ravi - Pediatrician</option>
+            </select>
+            <input type="date" id="date" required>
+            <button type="submit" class="btn">
+                Book Appointment
+            </button>
+        </form>
+        <p id="message"></p>
+        <h2>Appointment Details</h2>
+        <div id="appointmentList"></div>
+    </section>
+    <footer>
+        <p>&copy; 2026 HealthCare Hospital. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
